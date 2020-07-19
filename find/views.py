@@ -12,8 +12,8 @@ def googleCustomSearch(term,fileFormat,*start):
     if start:
         PARAMS={'fileType':fileFormat,
             'safe':"active",
-            'key':'AIzaSyCRnZPkS3zDBbzFL8Bn5vb2In8oFijBIs4',
-            'cx':'010825230688325870404:28ddwsmp3uq',
+            'key':'key',
+            'cx':'id',
             'q':term,
             'start':start,
         }
