@@ -1,0 +1,36 @@
+{% extends 'find/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container" style="margin-top: 150px;">
+    <ul class="collection">
+        {% for i in result %}
+        <li class="row collection-item avatar">
+            <img src="{% static 'images/pdf.png' %}" alt="pdf" style="display:inline-block;" class="col s1" width="">
+            <div class="col s10">
+                <strong><span class="title" style="display: inline-block;">{{ i.title }}</span></strong>
+                <p>
+                    {{i.description}}
+                </p>
+                <a href="{{i.link}}" target="_blank" class="secondary-content"><i class="material-icons " width='125px'
+                        style="color: tomato; ">get_app</i></a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <form action="" method="post">
+        <ul class="pagination">
+            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+    </form>
+</div>
+
+
+{% endblock content %}
